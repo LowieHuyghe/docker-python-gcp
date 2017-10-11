@@ -38,6 +38,14 @@ RUN easy_install-3.6 pip \
     && pip3.6 install --upgrade pip
 
 
+# MariaDB libraries
+RUN apk update \
+	&& apk add --no-cache \
+        mariadb-dev \
+        mariadb-client \
+        mariadb-libs
+
+
 # Google Cloud SDK
 RUN wget --quiet --output-document=/opt/google-cloud-sdk.tar.gz https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-${GOOGLE_CLOUD_SDK_VERSION}-linux-x86_64.tar.gz
 RUN tar -xzf /opt/google-cloud-sdk.tar.gz -C /opt \
