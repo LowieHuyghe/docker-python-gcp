@@ -10,7 +10,7 @@ jobs:
       - setup_remote_docker
       - run:
           name: Build Docker image
-          command: docker build --no-cache -t docker-python-gcp:2.7 2.7/Dockerfile
+          command: docker build --no-cache -t docker-python-gcp:2.7 2.7
       - deploy:
           name: Push Docker image
           command: |
