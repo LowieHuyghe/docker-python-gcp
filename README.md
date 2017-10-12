@@ -2,11 +2,16 @@
 
 Docker image with Python for Google Cloud Platform usage
 
-[![Docker Build Status](https://img.shields.io/docker/build/lowieh/docker-python-gcp.svg)](https://hub.docker.com/r/lowieh/docker-python-gcp)
+[![CircleCI](https://circleci.com/gh/LowieHuyghe/docker-python-gcp.svg?style=svg)](https://circleci.com/gh/LowieHuyghe/docker-python-gcp)
 [![Docker Pulls](https://img.shields.io/docker/pulls/lowieh/docker-python-gcp.svg)](https://hub.docker.com/r/lowieh/docker-python-gcp)
 [![Docker Stars](https://img.shields.io/docker/stars/lowieh/docker-python-gcp.svg)](https://hub.docker.com/r/lowieh/docker-python-gcp)
 
-* Python @ 2.7
-* Python @ 3.6
+Available in versions:
+* Python 2.7 (tag: `2.7`)
+* Python 3.4 (tag: `3.4`)
+* Python 3.5 (tag: `3.5`)
+* Python 3.6 (tag: `3.6`)
+
+Includes:
 * Google Cloud SDK @ 174.0.0
   - Google App Engine SDK
