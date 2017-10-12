@@ -18,3 +18,10 @@ jobs:
               docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
               docker push docker-python-gcp:2.7
             fi
+
+workflows:
+  version: 2
+
+  build-2.7:
+    jobs:
+      - build-2.7
