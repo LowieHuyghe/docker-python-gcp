@@ -5,6 +5,9 @@ MAINTAINER Lowie Huyghe <iam@lowiehuyghe.com>
 ENV GOOGLE_CLOUD_SDK_VERSION 174.0.0
 
 
+# Update setuptools to avoid this issue: https://github.com/linsomniac/python-memcached/issues/103
+RUN pip install -U setuptools
+
 # Google Cloud SDK
 RUN wget --quiet --output-document=/opt/google-cloud-sdk.tar.gz https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-${GOOGLE_CLOUD_SDK_VERSION}-linux-x86_64.tar.gz
 RUN tar -xzf /opt/google-cloud-sdk.tar.gz -C /opt \
