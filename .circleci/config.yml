@@ -9,6 +9,9 @@ jobs:
       - checkout
       - setup_remote_docker
       - run:
+          name: Prepare Docker image
+          command: cp -R files 2.7/files
+      - run:
           name: Build Docker image
           command: docker build --no-cache -t lowieh/docker-python-gcp:2.7 2.7
       - deploy:
@@ -25,6 +28,9 @@ jobs:
     steps:
       - checkout
       - setup_remote_docker
+      - run:
+          name: Prepare Docker image
+          command: cp -R files 3.4/files
       - run:
           name: Build Docker image
           command: docker build --no-cache -t lowieh/docker-python-gcp:3.4 3.4
@@ -43,6 +49,9 @@ jobs:
       - checkout
       - setup_remote_docker
       - run:
+          name: Prepare Docker image
+          command: cp -R files 3.5/files
+      - run:
           name: Build Docker image
           command: docker build --no-cache -t lowieh/docker-python-gcp:3.5 3.5
       - deploy:
@@ -59,6 +68,9 @@ jobs:
     steps:
       - checkout
       - setup_remote_docker
+      - run:
+          name: Prepare Docker image
+          command: cp -R files 3.6/files
       - run:
           name: Build Docker image
           command: docker build --no-cache -t lowieh/docker-python-gcp:3.6 3.6

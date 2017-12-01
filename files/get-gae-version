@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+VERSION="$1"
+
+VERSION=$( echo "$VERSION" | sed -E 's:[^a-z0-9\-]:-:g' )
+VERSION=$( echo "$VERSION" | sed -E 's:-+:-:g' )
+VERSION=$( echo "$VERSION" | sed -E 's:^-+::g' )
+VERSION=$( echo "${VERSION:0:63}" )
+VERSION=$( echo "$VERSION" | sed -E 's:-+$::g' )
+
+printf "$VERSION"

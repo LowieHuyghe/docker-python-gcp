@@ -4,6 +4,9 @@ MAINTAINER Lowie Huyghe <iam@lowiehuyghe.com>
 # Config
 ENV GOOGLE_CLOUD_SDK_VERSION 174.0.0
 
+# Files
+COPY files/get-gae-version /usr/local/bin/
+
 
 # Google Cloud SDK
 RUN wget --quiet --output-document=/opt/google-cloud-sdk.tar.gz https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-${GOOGLE_CLOUD_SDK_VERSION}-linux-x86_64.tar.gz

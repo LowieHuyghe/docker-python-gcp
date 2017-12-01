@@ -4,6 +4,9 @@ MAINTAINER Lowie Huyghe <iam@lowiehuyghe.com>
 # Config
 ENV GOOGLE_CLOUD_SDK_VERSION 174.0.0
 
+# Files
+COPY files/get-gae-version /usr/local/bin/
+
 
 # Update setuptools to avoid this issue: https://github.com/linsomniac/python-memcached/issues/103
 RUN pip install -U setuptools
