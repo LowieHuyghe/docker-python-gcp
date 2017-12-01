@@ -13,13 +13,13 @@ jobs:
           command: cp -R files 2.7/files
       - run:
           name: Build Docker image
-          command: docker build --no-cache -t lowieh/docker-python-gcp:2.7 2.7
+          command: docker build --no-cache -t lowieh/python-gcp:2.7 2.7
       - deploy:
           name: Push Docker image
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               docker login -u $DOCKER_USER -p $DOCKER_PASS
-              docker push lowieh/docker-python-gcp:2.7
+              docker push lowieh/python-gcp:2.7
             fi
 
   build-3.4:
@@ -33,13 +33,13 @@ jobs:
           command: cp -R files 3.4/files
       - run:
           name: Build Docker image
-          command: docker build --no-cache -t lowieh/docker-python-gcp:3.4 3.4
+          command: docker build --no-cache -t lowieh/python-gcp:3.4 3.4
       - deploy:
           name: Push Docker image
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               docker login -u $DOCKER_USER -p $DOCKER_PASS
-              docker push lowieh/docker-python-gcp:3.4
+              docker push lowieh/python-gcp:3.4
             fi
 
   build-3.5:
@@ -53,13 +53,13 @@ jobs:
           command: cp -R files 3.5/files
       - run:
           name: Build Docker image
-          command: docker build --no-cache -t lowieh/docker-python-gcp:3.5 3.5
+          command: docker build --no-cache -t lowieh/python-gcp:3.5 3.5
       - deploy:
           name: Push Docker image
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               docker login -u $DOCKER_USER -p $DOCKER_PASS
-              docker push lowieh/docker-python-gcp:3.5
+              docker push lowieh/python-gcp:3.5
             fi
 
   build-3.6:
@@ -73,13 +73,13 @@ jobs:
           command: cp -R files 3.6/files
       - run:
           name: Build Docker image
-          command: docker build --no-cache -t lowieh/docker-python-gcp:3.6 3.6
+          command: docker build --no-cache -t lowieh/python-gcp:3.6 3.6
       - deploy:
           name: Push Docker image
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               docker login -u $DOCKER_USER -p $DOCKER_PASS
-              docker push lowieh/docker-python-gcp:3.6
+              docker push lowieh/python-gcp:3.6
             fi
 
 
