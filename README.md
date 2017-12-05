@@ -2,7 +2,7 @@
 
 Docker image with Python for Google Cloud Platform usage
 
-[![CircleCI](https://circleci.com/gh/LowieHuyghe/python-gcp.svg?style=svg)](https://circleci.com/gh/LowieHuyghe/python-gcp)
+[![CircleCI](https://circleci.com/gh/LowieHuyghe/docker-python-gcp.svg?style=svg)](https://circleci.com/gh/LowieHuyghe/docker-python-gcp)
 [![Docker Pulls](https://img.shields.io/docker/pulls/lowieh/python-gcp.svg)](https://hub.docker.com/r/lowieh/python-gcp)
 [![Docker Stars](https://img.shields.io/docker/stars/lowieh/python-gcp.svg)](https://hub.docker.com/r/lowieh/python-gcp)
 
